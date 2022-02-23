@@ -1,10 +1,11 @@
 const express = require('express');
 
 const app = express();
+const PORT = process.env.PORT || 8080;
 
 app.get('/', (req, res) => {
     res.send('<h1>Node app</h1>')
 })
-app.listen(8081, () => {
-    console.log(`server is running at port 3000...`)
+app.listen(PORT, () => {
+    console.log(`server is running at port ${PORT}...`)
 })
